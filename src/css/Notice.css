@@ -1,0 +1,18 @@
+
+
+.notice-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 24vw;
+    height: 59px;
+    background-color: #7A5EA7;
+    border-radius: 5px;
+    border: 1px dashed black;
+
+}
+.notice-container p{
+    font-family: Hanken Grotesk,sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
