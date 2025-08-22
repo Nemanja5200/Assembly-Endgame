@@ -5,8 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 70px auto 0;
   text-align: center;
-  margin-top: 70px;
 }
 
 .header-title {
@@ -19,7 +19,7 @@
 
 .heder-description {
   margin-top: 10px;
-  max-width: 27vw;
+  max-width: 500px;
   font-family:
     Hanken Grotesk,
     sans-serif;

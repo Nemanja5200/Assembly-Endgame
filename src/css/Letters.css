@@ -1,0 +1,24 @@
+
+.letters-container{
+    margin: 50px auto 0;
+    max-width: 600px;
+    min-height: 55px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+.letters-container button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 1px;
+    background-color: #323232 ;
+    font-family: Hanken Grotesk, sans-serif;
+    font-weight: bold;
+    font-size: 1.125rem;
+    border-bottom: 2px solid white;
+    color: white;
+}
