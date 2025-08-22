@@ -15,11 +15,37 @@
   height: 100%;
   border: none;
   border-radius: 3px;
-  font-family:
-    Hanken Grotesk,
-    sans-serif;
+  font-family: Hanken Grotesk, sans-serif;
   font-weight: 700;
   font-size: 0.75rem;
   padding: 6px 10px;
   white-space: nowrap;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.language-used::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
+  z-index: 0;
+}
+
+.language-used .language-name {
+  z-index: 1;
+  opacity: 0.1;
+}
+
+.skull {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2em;
+  z-index: 2;
 }

@@ -14,10 +14,10 @@ function App() {
     <>
         <div className="app-container">
             <Header />
-            <Notice />
-            <Lives />
-            <Letters/>
-            <Board alphabet = {gameState.letters} onClick={gameState.handleLetterClick}/>
+            <Notice gameOver = {gameState.gameOver} />
+            <Lives languages={gameState.languageStates} />
+            <Letters word = {gameState.word} alphabet = {gameState.letters} gameOver={gameState.gameOver}/>
+            <Board alphabet = {gameState.letters} onClick={gameState.handleLetterClick} gameOver={gameState.gameOver}/>
         </div>
 
     </>
