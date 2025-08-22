@@ -5,8 +5,11 @@ import { Lives } from "./components/Lives.jsx";
 import {Letters} from "./components/Letters.jsx";
 import "./css/App.css";
 import {Board} from "./components/Board.jsx";
+import {useHangMan} from "./hooks/useHangMan.js";
+
 
 function App() {
+    const gameState = useHangMan();
   return (
     <>
         <div className="app-container">
@@ -14,7 +17,7 @@ function App() {
             <Notice />
             <Lives />
             <Letters/>
-            <Board/>
+            <Board alphabet = {gameState.letters} onClick={gameState.handleLetterClick}/>
         </div>
 
     </>
