@@ -14,7 +14,7 @@ export const useHangMan = () => {
   const [letters, setLetters] = useState(generateAlphabet());
   const [languageStates, setLanguageStates] = useState(initialLanguages);
   const [gameOver, setGameover] = useState(false);
-    const [lastGuessWrong, setLastGuessWrong] = useState(false);
+  const [lastGuessWrong, setLastGuessWrong] = useState(false);
 
   const loseLife = () => {
     const firstUnusedIndex = languageStates.findIndex((lang) => !lang.isUsed);
@@ -64,8 +64,8 @@ export const useHangMan = () => {
     if (!isCorrect) {
       loseLife();
       setLastGuessWrong(true);
-    } else{
-        setLastGuessWrong(false);
+    } else {
+      setLastGuessWrong(false);
     }
   };
 
@@ -85,7 +85,7 @@ export const useHangMan = () => {
     setLetters,
     gameOver,
     languageStates,
-      lastGuessWrong,
+    lastGuessWrong,
     gameWon: checkWin(),
 
     //Functions
