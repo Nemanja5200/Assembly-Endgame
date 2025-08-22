@@ -15,7 +15,9 @@
   height: 100%;
   border: none;
   border-radius: 3px;
-  font-family: Hanken Grotesk, sans-serif;
+  font-family:
+    Hanken Grotesk,
+    sans-serif;
   font-weight: 700;
   font-size: 0.75rem;
   padding: 6px 10px;
@@ -25,7 +27,7 @@
 }
 
 .language-used::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
