@@ -2,6 +2,23 @@ import React from "react";
 import "../css/Notice.css";
 
 export const Notice = (props) => {
+    const getLanguageMessage = (languageName) => {
+        const messages = {
+            "HTML": " HTML is gone! No more structure for you!",
+            "CSS": " CSS lost! Your sites will look terrible!",
+            "Javascript": " JavaScript vanished! No more interactivity!",
+            "React": " React disappeared! Components are useless now!",
+            "TypeScript": " TypeScript lost! Back to runtime errors!",
+            "Node.js": " Node.js gone! Server-side development ended!",
+            "Python": " Python lost! Machine learning dreams crushed!",
+            "Ruby": " Ruby lost! You're down to Assembly - LAST CHANCE!"
+        };
+        return messages[languageName] || `💀 ${languageName} lost!`;
+    };
+
+    const usedLanguages = props.languageStates?.filter(lang => lang.isUsed) || [];
+    const lastLostLanguage = usedLanguages[usedLanguages.length - 1];
+
     return (
         <>
             {props.gameOver ? (
@@ -14,7 +31,15 @@ export const Notice = (props) => {
                     <h3>You win!</h3>
                     <p>Well done! 🎉</p>
                 </div>
-            ) : null}
+            ) : lastLostLanguage ? (
+                <div className="notice-container">
+                    <p>{getLanguageMessage(lastLostLanguage.name)}</p>
+                </div>
+            ) : (
+                <div className="notice-container">
+                    <p>Guess the programming language! 🚀</p>
+                </div>
+            )}
         </>
     );
 };

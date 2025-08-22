@@ -16,6 +16,7 @@ function App() {
         <Notice
             gameOver={gameState.gameOver}
             gameWon={gameState.gameWon}
+            languageStates={gameState.languageStates}
         />
         <Lives languages={gameState.languageStates} />
         <Letters

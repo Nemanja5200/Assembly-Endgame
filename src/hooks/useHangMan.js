@@ -15,25 +15,29 @@ export const useHangMan = () => {
   const [languageStates, setLanguageStates] = useState(initialLanguages);
   const [gameOver, setGameover] = useState(false);
 
-  const loseLife = () => {
-    const firstUnusedIndex = languageStates.findIndex((lang) => !lang.isUsed);
+    const loseLife = () => {
+        const firstUnusedIndex = languageStates.findIndex((lang) => !lang.isUsed);
 
-    if (languageStates[firstUnusedIndex].name.toUpperCase() !== "ASSEMBLY") {
-      setLanguageStates((prev) =>
-        prev.map((lang, index) => {
-          if (index === firstUnusedIndex) {
-            return {
-              ...lang,
-              isUsed: true,
-            };
-          }
-          return lang;
-        }),
-      );
-    } else {
-      setGameover(true);
-    }
-  };
+        if (firstUnusedIndex !== -1) {
+
+            setLanguageStates((prev) =>
+                prev.map((lang, index) => {
+                    if (index === firstUnusedIndex) {
+                        return {
+                            ...lang,
+                            isUsed: true,
+                        };
+                    }
+                    return lang;
+                }),
+            );
+
+         
+            if (languageStates[firstUnusedIndex].name.toUpperCase() === "RUBY") {
+                setGameover(true);
+            }
+        }
+    };
 
     const checkWin = () => {
         const wordLetters = word.toUpperCase().split('');
