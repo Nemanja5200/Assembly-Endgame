@@ -76,6 +76,8 @@ export const useHangMan = () => {
     setLanguageStates(initialLanguages);
 
     setGameover(false);
+
+    setWord(generate().toUpperCase());
   };
 
   return {
