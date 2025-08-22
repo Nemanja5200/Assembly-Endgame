@@ -64,6 +64,17 @@ export const useHangMan = () => {
         }
     };
 
+
+    const handleNewGameClick = () => {
+
+        setLetters(generateAlphabet());
+
+        setLanguageStates(initialLanguages);
+
+        setGameover(false);
+
+    };
+
   return {
     //States
     word,
@@ -77,5 +88,6 @@ export const useHangMan = () => {
 
     //Functions
     handleLetterClick,
+      handleNewGameClick,
   };
 };
