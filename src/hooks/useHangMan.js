@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { languages as initialLanguages } from "../languages.js";
+import { generate } from "random-words";
 
 const generateAlphabet = () => {
   return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((letter) => ({
@@ -10,7 +11,7 @@ const generateAlphabet = () => {
 };
 
 export const useHangMan = () => {
-  const [word, setWord] = useState("REACT");
+  const [word, setWord] = useState(generate().toUpperCase());
   const [letters, setLetters] = useState(generateAlphabet());
   const [languageStates, setLanguageStates] = useState(initialLanguages);
   const [gameOver, setGameover] = useState(false);
