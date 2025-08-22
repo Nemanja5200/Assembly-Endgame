@@ -5,7 +5,7 @@ import { Letters } from "./components/Letters.jsx";
 import "./css/App.css";
 import { Board } from "./components/Board.jsx";
 import { useHangMan } from "./hooks/useHangMan.js";
-import {NewGame} from "./components/NewGame.jsx";
+import { NewGame } from "./components/NewGame.jsx";
 
 function App() {
   const gameState = useHangMan();
@@ -14,9 +14,10 @@ function App() {
       <div className="app-container">
         <Header />
         <Notice
-            gameOver={gameState.gameOver}
-            gameWon={gameState.gameWon}
-            languageStates={gameState.languageStates}
+          gameOver={gameState.gameOver}
+          gameWon={gameState.gameWon}
+          languageStates={gameState.languageStates}
+          lastGuess={gameState.lastGuessWrong}
         />
         <Lives languages={gameState.languageStates} />
         <Letters
@@ -30,11 +31,11 @@ function App() {
           gameOver={gameState.gameOver}
           gameWon={gameState.gameWon}
         />
-          <NewGame
+        <NewGame
           gameOver={gameState.gameOver}
           gameWon={gameState.gameWon}
           onClick={gameState.handleNewGameClick}
-          />
+        />
       </div>
     </>
   );

@@ -44,10 +44,10 @@
   font-size: 1rem;
 }
 
-.gamewon-container{
+.gamewon-container {
   font-family:
-          Hanken Grotesk,
-          sans-serif;
+    Hanken Grotesk,
+    sans-serif;
   font-weight: 500;
   margin: 35px auto 0;
   display: flex;
@@ -57,11 +57,10 @@
   width: 90%;
   max-width: 400px;
   height: 59px;
-  background-color: #10A95B;
+  background-color: #10a95b;
   border-radius: 5px;
   border: 1px dashed black;
 }
-
 
 .gamewon-container h3 {
   font-size: 1.25rem;

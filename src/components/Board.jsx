@@ -16,7 +16,8 @@ export const Board = (props) => {
                     ? "#EC5D49"
                     : "#FCBA29",
               opacity: props.gameOver || props.gameWon ? 0.4 : 1,
-              cursor: props.gameOver || props.gameWon ? "not-allowed" : "pointer",
+              cursor:
+                props.gameOver || props.gameWon ? "not-allowed" : "pointer",
               transition: "background-color 0.3s ease",
             }}
           >
