@@ -1,0 +1,30 @@
+
+
+.board-container{
+    margin: 50px auto 0;
+    width: 100%;
+    max-width: 505px;
+    height: auto;
+    min-height: 164px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-content: center;
+}
+
+
+.board-container button{
+    padding: 6px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #FCBA29 ;
+    font-family: Hanken Grotesk, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: black;
+}
+
